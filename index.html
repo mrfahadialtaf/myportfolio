@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadi Altaf | Senior Data Engineer & Cloud/AI Infrastructure Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#FFFFFF',
+                        brandBgOff: '#F8FAFC',
+                        brandBgCard: '#FFFFFF',
+                        brandTextDark: '#0F172A',
+                        brandTextMuted: '#475569',
+                        brandTextSubtle: '#64748B',
+                        brandBorder: '#E2E8F0',
+                        brandBorderHover: '#CBD5E1',
+                        indigoPrimary: '#4F46E5',
+                        indigoLight: '#6366F1',
+                        emeraldAccent: '#059669',
+                        skyAccent: '#0284C7',
+                        amberAccent: '#D97706',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    boxShadow: {
+                        'card-clean': '0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04)',
+                        'card-hover': '0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04)',
+                        'modal': '0 25px 50px -12px rgba(15, 23, 42, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #0F172A;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .clean-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .clean-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 1rem;
+            box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .clean-card:hover {
+            border-color: #CBD5E1;
+            box-shadow: 0 12px 24px -6px rgba(79, 70, 229, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+            transform: translateY(-2px);
+        }
+
+        .modal-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+        }
+
+        .gradient-heading {
+            background: linear-gradient(135deg, #0F172A 0%, #4F46E5 60%, #0284C7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-subtle-grid {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(226, 232, 240, 0.5) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(226, 232, 240, 0.5) 1px, transparent 1px);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+    </style>
+</head>
+<body class="bg-brandBg text-brandTextDark antialiased min-h-screen flex flex-col justify-between">
+
+    <header class="fixed top-0 left-0 right-0 z-40 clean-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-indigoPrimary text-white flex items-center justify-center font-mono font-bold text-lg shadow-md shadow-indigoPrimary/20 group-hover:bg-indigoLight transition-colors">
+                        FA
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-lg text-brandTextDark tracking-tight group-hover:text-indigoPrimary transition-colors block leading-none">
+                            Fadi Altaf
+                        </span>
+                        <span class="text-[11px] font-semibold text-brandTextSubtle block mt-1">Senior Data Engineer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-xs font-bold uppercase tracking-wider text-brandTextMuted hover:text-indigoPrimary transition-colors">About</a>
+                    <a href="#skills" class="text-xs font-bold uppercase tracking-wider text-brandTextMuted hover:text-indigoPrimary transition-colors">Skills</a>
+                    <a href="#experience" class="text-xs font-bold uppercase tracking-wider text-brandTextMuted hover:text-indigoPrimary transition-colors">Experience</a>
+                    <a href="#projects" class="text-xs font-bold uppercase tracking-wider text-brandTextMuted hover:text-indigoPrimary transition-colors">Projects</a>
+                    <a href="#certifications" class="text-xs font-bold uppercase tracking-wider text-brandTextMuted hover:text-indigoPrimary transition-colors">Certifications</a>
+                    <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-brandTextMuted hover:text-indigoPrimary transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-indigoPrimary hover:bg-indigoLight transition-all shadow-md shadow-indigoPrimary/20">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-brandTextMuted hover:text-brandTextDark hover:bg-slate-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brandBorder px-4 pt-2 pb-6 space-y-2">
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-brandTextMuted hover:text-indigoPrimary hover:bg-slate-50">About</a>
+            <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-brandTextMuted hover:text-indigoPrimary hover:bg-slate-50">Skills</a>
+            <a href="#experience" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-brandTextMuted hover:text-indigoPrimary hover:bg-slate-50">Experience</a>
+            <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-brandTextMuted hover:text-indigoPrimary hover:bg-slate-50">Projects</a>
+            <a href="#certifications" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-brandTextMuted hover:text-indigoPrimary hover:bg-slate-50">Certifications</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-brandTextMuted hover:text-indigoPrimary hover:bg-slate-50">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section id="hero" class="relative py-16 md:py-24 bg-subtle-grid border-b border-brandBorder">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Bio Content -->
+                    <div class="lg:col-span-7 space-y-6 text-left">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigoPrimary text-xs font-bold tracking-wide uppercase">
+                            <span class="w-2 h-2 rounded-full bg-indigoPrimary animate-pulse"></span>
+                            <span>Cloud & AI Data Infrastructure Specialist</span>
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brandTextDark leading-tight">
+                            Hi, I'm <span class="gradient-heading">Fadi Altaf</span>
+                        </h1>
+
+                        <h2 class="text-lg sm:text-xl font-bold text-brandTextMuted font-mono">
+                            Senior Data Engineer | Multi-Cloud & AI Specialist
+                        </h2>
+
+                        <p class="text-base text-brandTextMuted max-w-2xl leading-relaxed">
+                            Versatile Senior Data Engineer with <strong>~9 years of experience</strong> architecting enterprise data platforms, AI-ready data infrastructure, and scalable cloud lakehouses across Healthcare, SaaS, Fintech, and Ecommerce sectors. Proven track record guiding platform evolution from legacy systems to multi-cloud ecosystems (Azure, AWS, GCP, Microsoft Fabric).
+                        </p>
+
+                        <!-- Quick Contact Bar -->
+                        <div class="flex flex-wrap gap-3 text-xs sm:text-sm">
+                            <span class="px-3.5 py-2 rounded-xl bg-slate-100 text-brandTextMuted font-medium flex items-center space-x-2 border border-slate-200">
+                                <i class="fa-solid fa-location-dot text-indigoPrimary"></i>
+                                <span>Pond Eddy, NY 12770</span>
+                            </span>
+                            <button onclick="copyToClipboard('mrfadialtaf@gmail.com', 'Email address copied!')" class="px-3.5 py-2 rounded-xl bg-slate-100 text-brandTextMuted hover:text-indigoPrimary font-medium flex items-center space-x-2 border border-slate-200 hover:border-indigo-300 transition-colors">
+                                <i class="fa-solid fa-envelope text-indigoPrimary"></i>
+                                <span>mrfadialtaf@gmail.com</span>
+                                <i class="fa-solid fa-copy text-[11px] text-brandTextSubtle ml-1"></i>
+                            </button>
+                            <button onclick="copyToClipboard('(281) 720-6090', 'Phone number copied!')" class="px-3.5 py-2 rounded-xl bg-slate-100 text-brandTextMuted hover:text-indigoPrimary font-medium flex items-center space-x-2 border border-slate-200 hover:border-indigo-300 transition-colors">
+                                <i class="fa-solid fa-phone text-indigoPrimary"></i>
+                                <span>(281) 720-6090</span>
+                                <i class="fa-solid fa-copy text-[11px] text-brandTextSubtle ml-1"></i>
+                            </button>
+                        </div>
+
+                        <!-- CTA Links -->
+                        <div class="pt-2 flex flex-wrap items-center gap-4">
+                            <a href="#contact" class="px-7 py-3 rounded-xl font-bold text-white bg-indigoPrimary hover:bg-indigoLight shadow-lg shadow-indigoPrimary/20 transition-all text-xs uppercase tracking-wider">
+                                Contact Me
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammad-fahad-altaf-0b5b76382/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-100 text-brandTextDark hover:text-indigoPrimary font-bold border border-slate-200 transition-colors text-xs flex items-center space-x-2">
+                                <i class="fa-brands fa-linkedin text-base text-indigoPrimary"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/mrfahadialtaf" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-100 text-brandTextDark hover:text-indigoPrimary font-bold border border-slate-200 transition-colors text-xs flex items-center space-x-2">
+                                <i class="fa-brands fa-github text-base text-indigoPrimary"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Impact Key Statistics Cards -->
+                    <div id="about" class="lg:col-span-5 grid grid-cols-2 gap-4">
+                        <div class="clean-card p-6 border-l-4 border-l-indigoPrimary">
+                            <div class="text-3xl font-extrabold text-brandTextDark font-mono mb-1">~9 Yrs</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-indigoPrimary">Enterprise Exp</div>
+                            <p class="text-xs text-brandTextSubtle mt-2">Azure, Fabric, AWS & GCP</p>
+                        </div>
+                        <div class="clean-card p-6 border-l-4 border-l-emeraldAccent">
+                            <div class="text-3xl font-extrabold text-brandTextDark font-mono mb-1">5TB+</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-emeraldAccent">Daily Patient Data</div>
+                            <p class="text-xs text-brandTextSubtle mt-2">Azure Databricks & Fabric</p>
+                        </div>
+                        <div class="clean-card p-6 border-l-4 border-l-skyAccent">
+                            <div class="text-3xl font-extrabold text-brandTextDark font-mono mb-1">$140K</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-skyAccent">Annual Savings</div>
+                            <p class="text-xs text-brandTextSubtle mt-2">32% Cloud Cost Reduction</p>
+                        </div>
+                        <div class="clean-card p-6 border-l-4 border-l-amberAccent">
+                            <div class="text-3xl font-extrabold text-brandTextDark font-mono mb-1">150M+</div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-amberAccent">Daily Streams</div>
+                            <p class="text-xs text-brandTextSubtle mt-2">Cross-Cloud Telemetry</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-brandBg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold text-indigoPrimary uppercase tracking-widest mb-2">Technical Core</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-brandTextDark">Skills & Infrastructure Matrix</h3>
+                    <p class="text-brandTextMuted mt-3 text-sm">Filter through core competencies across cloud platforms, big data engines, vector search, and orchestration tools.</p>
+                </div>
+
+                <!-- Search & Filter Controls -->
+                <div class="mb-8 space-y-4 max-w-4xl mx-auto">
+                    <div class="relative max-w-md mx-auto">
+                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-brandTextSubtle"></i>
+                        <input type="text" id="skill-search" placeholder="Search skills (e.g. Databricks, Kafka, Spark, dbt...)" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-brandBorder text-brandTextDark placeholder-brandTextSubtle focus:outline-none focus:border-indigoPrimary focus:bg-white transition-colors text-sm">
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-2" id="skill-categories">
+                        <button data-cat="all" class="skill-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-indigoPrimary text-white shadow-sm transition-all">All</button>
+                        <button data-cat="cloud" class="skill-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-brandTextMuted hover:bg-slate-200 transition-all">Cloud Infrastructure</button>
+                        <button data-cat="bigdata" class="skill-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-brandTextMuted hover:bg-slate-200 transition-all">Big Data Engines</button>
+                        <button data-cat="warehousing" class="skill-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-brandTextMuted hover:bg-slate-200 transition-all">Warehousing & Storage</button>
+                        <button data-cat="ai" class="skill-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-brandTextMuted hover:bg-slate-200 transition-all">AI & Vector Infra</button>
+                        <button data-cat="orchestration" class="skill-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-brandTextMuted hover:bg-slate-200 transition-all">Orchestration</button>
+                        <button data-cat="devops" class="skill-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-brandTextMuted hover:bg-slate-200 transition-all">DevOps & Governance</button>
+                    </div>
+                </div>
+
+                <!-- Skill Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="skills-grid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 bg-brandBgOff border-y border-brandBorder">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold text-indigoPrimary uppercase tracking-widest mb-2">Track Record</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-brandTextDark">Professional Experience</h3>
+                    <p class="text-brandTextMuted mt-3 text-sm">Click any career role to open the comprehensive detailed achievement & metric breakdown modal.</p>
+                </div>
+
+                <div class="relative border-l-2 border-slate-300 ml-4 sm:ml-32 space-y-12">
+
+                    <!-- Role 1: Integra Connect -->
+                    <div class="relative group cursor-pointer" onclick="openExperienceModal('integra')">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-white border-2 border-indigoPrimary flex items-center justify-center text-indigoPrimary text-xs shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-hospital"></i>
+                        </div>
+                        <div class="hidden sm:block absolute -left-36 top-2 text-xs font-mono font-semibold text-brandTextSubtle w-28 text-right">
+                            May 2023 – Present
+                        </div>
+
+                        <div class="ml-8 clean-card p-6 sm:p-8 group-hover:border-indigoPrimary transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="sm:hidden text-xs font-mono text-indigoPrimary block mb-1">May 2023 – Present</span>
+                                    <h4 class="text-xl font-bold text-brandTextDark group-hover:text-indigoPrimary transition-colors">Senior Data Engineer</h4>
+                                    <h5 class="text-indigoPrimary font-semibold text-sm">Integra Connect</h5>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigoPrimary border border-indigo-200 self-start sm:self-auto flex items-center space-x-1">
+                                    <span>Healthcare AI & Lakehouse</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                                </span>
+                            </div>
+
+                            <p class="text-brandTextMuted text-sm leading-relaxed mb-4">
+                                Architecting a HIPAA-compliant Delta Lake on Azure Databricks & Microsoft Fabric OneLake processing 5TB+ daily patient EHR data and powering enterprise RAG AI pipelines.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">Azure Databricks</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">Microsoft Fabric OneLake</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">Azure Vector Search</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-emerald-50 text-emeraldAccent font-semibold border border-emerald-200">32% Cost Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Datavail -->
+                    <div class="relative group cursor-pointer" onclick="openExperienceModal('datavail')">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-white border-2 border-emeraldAccent flex items-center justify-center text-emeraldAccent text-xs shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div class="hidden sm:block absolute -left-36 top-2 text-xs font-mono font-semibold text-brandTextSubtle w-28 text-right">
+                            Apr 2022 – Apr 2023
+                        </div>
+
+                        <div class="ml-8 clean-card p-6 sm:p-8 group-hover:border-emeraldAccent transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="sm:hidden text-xs font-mono text-emeraldAccent block mb-1">Apr 2022 – Apr 2023</span>
+                                    <h4 class="text-xl font-bold text-brandTextDark group-hover:text-emeraldAccent transition-colors">Warehouse Data Engineer</h4>
+                                    <h5 class="text-emeraldAccent font-semibold text-sm">Datavail</h5>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emeraldAccent border border-emerald-200 self-start sm:self-auto flex items-center space-x-1">
+                                    <span>SaaS & Multi-Cloud Analytics</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                                </span>
+                            </div>
+
+                            <p class="text-brandTextMuted text-sm leading-relaxed mb-4">
+                                Re-architected multi-cloud telemetry pipelines across GCP BigQuery and AWS handling 150M+ daily event streams with 80+ dbt models and reverse ETL workflows.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">GCP BigQuery</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">dbt Transformations</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">Apache Airflow</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-50 text-skyAccent font-semibold border border-sky-200">48% Faster BI Load</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: Ocrolus -->
+                    <div class="relative group cursor-pointer" onclick="openExperienceModal('ocrolus')">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-white border-2 border-skyAccent flex items-center justify-center text-skyAccent text-xs shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div class="hidden sm:block absolute -left-36 top-2 text-xs font-mono font-semibold text-brandTextSubtle w-28 text-right">
+                            Sep 2019 – Mar 2022
+                        </div>
+
+                        <div class="ml-8 clean-card p-6 sm:p-8 group-hover:border-skyAccent transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="sm:hidden text-xs font-mono text-skyAccent block mb-1">Sep 2019 – Mar 2022</span>
+                                    <h4 class="text-xl font-bold text-brandTextDark group-hover:text-skyAccent transition-colors">Big Data Engineer</h4>
+                                    <h5 class="text-skyAccent font-semibold text-sm">Ocrolus</h5>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-50 text-skyAccent border border-sky-200 self-start sm:self-auto flex items-center space-x-1">
+                                    <span>Fintech Real-Time Streaming</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                                </span>
+                            </div>
+
+                            <p class="text-brandTextMuted text-sm leading-relaxed mb-4">
+                                Engineered real-time Kafka & PySpark streaming ingestion on AWS EMR processing $50M+ daily transactions with automated credit-risk scoring.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">Apache Kafka</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">PySpark Streaming</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">AWS EMR & Redshift</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-amber-50 text-amberAccent font-semibold border border-amber-200">Sub-second Latency</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Ordergroove -->
+                    <div class="relative group cursor-pointer" onclick="openExperienceModal('ordergroove')">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-white border-2 border-slate-400 flex items-center justify-center text-slate-500 text-xs shadow-md group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="hidden sm:block absolute -left-36 top-2 text-xs font-mono font-semibold text-brandTextSubtle w-28 text-right">
+                            Jun 2017 – Aug 2019
+                        </div>
+
+                        <div class="ml-8 clean-card p-6 sm:p-8 group-hover:border-slate-400 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="sm:hidden text-xs font-mono text-slate-500 block mb-1">Jun 2017 – Aug 2019</span>
+                                    <h4 class="text-xl font-bold text-brandTextDark group-hover:text-slate-700 transition-colors">ETL/ELT Developer</h4>
+                                    <h5 class="text-slate-600 font-semibold text-sm">Ordergroove</h5>
+                                </div>
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200 self-start sm:self-auto flex items-center space-x-1">
+                                    <span>Ecommerce Batch Ingestion</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                                </span>
+                            </div>
+
+                            <p class="text-brandTextMuted text-sm leading-relaxed mb-4">
+                                Developed enterprise batch ETL pipelines consolidating inventory & order data across 5 databases for 2M+ monthly orders with Kimball dimensional modeling.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">PostgreSQL / MySQL</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">Python ETL</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium">Star & Snowflake Schemas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 bg-brandBg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold text-indigoPrimary uppercase tracking-widest mb-2">Engineering Highlights</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-brandTextDark">Relevant Projects</h3>
+                    <p class="text-brandTextMuted mt-3 text-sm">Architectural implementation specs for GenAI clinical engines, multi-cloud event telemetry, and real-time fraud streaming.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Project 1 -->
+                    <div class="clean-card overflow-hidden flex flex-col justify-between group">
+                        <div class="p-6 sm:p-8">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigoPrimary flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-brandTextDark group-hover:text-indigoPrimary transition-colors mb-3">
+                                Healthcare Vector Data Pipeline & Ingestion Engine
+                            </h4>
+                            <p class="text-brandTextMuted text-sm leading-relaxed mb-6">
+                                Ingests, cleanses, and anonymizes 1M+ doctor notes daily using PySpark on Databricks with Azure Vector Search for sub-second GenAI clinical decision RAG endpoints.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 border-t border-brandBorder space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-indigoPrimary font-semibold border border-slate-200">PySpark</span>
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-indigoPrimary font-semibold border border-slate-200">Azure Vector Search</span>
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-indigoPrimary font-semibold border border-slate-200">Databricks</span>
+                            </div>
+                            <button onclick="openProjectModal('proj1')" class="w-full py-3 rounded-xl bg-white border border-indigo-200 text-indigoPrimary hover:bg-indigoPrimary hover:text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm">
+                                View Architecture Breakdown
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="clean-card overflow-hidden flex flex-col justify-between group">
+                        <div class="p-6 sm:p-8">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emeraldAccent flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-brandTextDark group-hover:text-emeraldAccent transition-colors mb-3">
+                                Multi-Cloud Event Analytics & Data Quality Framework
+                            </h4>
+                            <p class="text-brandTextMuted text-sm leading-relaxed mb-6">
+                                Process 150M+ telemetry events daily across AWS S3 & GCP BigQuery using 80+ incremental dbt models and Great Expectations schema validation.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 border-t border-brandBorder space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-emeraldAccent font-semibold border border-slate-200">GCP BigQuery</span>
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-emeraldAccent font-semibold border border-slate-200">dbt</span>
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-emeraldAccent font-semibold border border-slate-200">Great Expectations</span>
+                            </div>
+                            <button onclick="openProjectModal('proj2')" class="w-full py-3 rounded-xl bg-white border border-emerald-200 text-emeraldAccent hover:bg-emeraldAccent hover:text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm">
+                                View Architecture Breakdown
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="clean-card overflow-hidden flex flex-col justify-between group">
+                        <div class="p-6 sm:p-8">
+                            <div class="w-12 h-12 rounded-xl bg-sky-50 text-skyAccent flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-brandTextDark group-hover:text-skyAccent transition-colors mb-3">
+                                Real-Time Financial Streaming Anomaly Detection Engine
+                            </h4>
+                            <p class="text-brandTextMuted text-sm leading-relaxed mb-6">
+                                Low-latency streaming ingestion on AWS via Apache Kafka and PySpark on EMR, flagging high-risk fraud in under 200 milliseconds.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 border-t border-brandBorder space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-skyAccent font-semibold border border-slate-200">Apache Kafka</span>
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-skyAccent font-semibold border border-slate-200">PySpark Streaming</span>
+                                <span class="px-2 py-1 rounded text-xs font-mono bg-white text-skyAccent font-semibold border border-slate-200">AWS EMR</span>
+                            </div>
+                            <button onclick="openProjectModal('proj3')" class="w-full py-3 rounded-xl bg-white border border-sky-200 text-skyAccent hover:bg-skyAccent hover:text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm">
+                                View Architecture Breakdown
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-20 bg-brandBgOff border-y border-brandBorder">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Certifications Grid Column -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <h2 class="text-xs font-bold text-indigoPrimary uppercase tracking-widest mb-2">Verified Credentials</h2>
+                            <h3 class="text-3xl font-extrabold text-brandTextDark">Certifications</h3>
+                            <p class="text-xs text-brandTextSubtle mt-1">Click certification cards to inspect credential details.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div onclick="openCertModal('fabric')" class="clean-card p-5 flex items-center space-x-4 cursor-pointer hover:border-indigoPrimary transition-all">
+                                <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl flex-shrink-0">
+                                    <i class="fa-brands fa-microsoft"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-brandTextDark">Fabric Analytics Engineer</h5>
+                                    <p class="text-xs font-mono font-semibold text-indigoPrimary mt-0.5">DP-600 Certification</p>
+                                    <p class="text-[11px] text-brandTextSubtle mt-1">Microsoft Certified</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openCertModal('aws')" class="clean-card p-5 flex items-center space-x-4 cursor-pointer hover:border-amber-500 transition-all">
+                                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl flex-shrink-0">
+                                    <i class="fa-brands fa-aws"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-brandTextDark">AWS Data Engineer</h5>
+                                    <p class="text-xs font-mono font-semibold text-amber-600 mt-0.5">Associate Level</p>
+                                    <p class="text-[11px] text-brandTextSubtle mt-1">Amazon Web Services</p>
+                                </div>
+                            </div>
+
+                            <div onclick="openCertModal('databricks')" class="clean-card p-5 flex items-center space-x-4 sm:col-span-2 cursor-pointer hover:border-red-500 transition-all">
+                                <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-2xl flex-shrink-0">
+                                    <i class="fa-solid fa-cubes"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-brandTextDark">Databricks Certified Data Engineer Professional</h5>
+                                    <p class="text-xs font-mono font-semibold text-red-600 mt-0.5">Professional Certification Level</p>
+                                    <p class="text-[11px] text-brandTextSubtle mt-1">Databricks Academy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Column -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <h2 class="text-xs font-bold text-emeraldAccent uppercase tracking-widest mb-2">Academic Background</h2>
+                            <h3 class="text-3xl font-extrabold text-brandTextDark">Education</h3>
+                        </div>
+
+                        <div class="clean-card p-6 border-l-4 border-l-emeraldAccent">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="p-3 rounded-xl bg-emerald-50 text-emeraldAccent text-xl">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-brandTextDark">Bachelor of Science</h4>
+                                    <p class="text-xs font-semibold text-emeraldAccent">Computer Science</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-brandTextMuted leading-relaxed">
+                                Fundamental coursework and specialization in Distributed Systems, High-Performance Parallel Computing, Relational & NoSQL Database Theory, Data Structures, and Software Architecture Design Patterns.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-brandBg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold text-indigoPrimary uppercase tracking-widest mb-2">Get In Touch</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-brandTextDark">Let's Connect</h3>
+                    <p class="text-brandTextMuted mt-3 text-sm">Inquiring about multi-cloud data infrastructure, GenAI vector pipelines, or enterprise leadership opportunities? Drop a message below.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-5xl mx-auto">
+                    
+                    <!-- Direct Contact Badges Column -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="clean-card p-6 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigoPrimary flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-brandTextSubtle">Direct Email</p>
+                                    <a href="mailto:mrfadialtaf@gmail.com" class="text-sm font-bold text-brandTextDark hover:text-indigoPrimary transition-colors">mrfadialtaf@gmail.com</a>
+                                </div>
+                            </div>
+                            <button onclick="copyToClipboard('mrfadialtaf@gmail.com', 'Email address copied!')" class="text-brandTextSubtle hover:text-indigoPrimary p-2" title="Copy Email">
+                                <i class="fa-solid fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="clean-card p-6 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emeraldAccent flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-brandTextSubtle">Phone</p>
+                                    <a href="tel:2817206090" class="text-sm font-bold text-brandTextDark hover:text-emeraldAccent transition-colors">(281) 720-6090</a>
+                                </div>
+                            </div>
+                            <button onclick="copyToClipboard('(281) 720-6090', 'Phone number copied!')" class="text-brandTextSubtle hover:text-emeraldAccent p-2" title="Copy Phone">
+                                <i class="fa-solid fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="clean-card p-6 flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-sky-50 text-skyAccent flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-brandTextSubtle">Location</p>
+                                <p class="text-sm font-bold text-brandTextDark">Pond Eddy, NY 12770</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 flex justify-center space-x-4">
+                            <a href="https://www.linkedin.com/in/muhammad-fahad-altaf-0b5b76382/" target="_blank" class="px-5 py-3 rounded-xl bg-slate-100 text-brandTextDark hover:text-indigoPrimary text-xs font-bold flex items-center space-x-2 border border-slate-200">
+                                <i class="fa-brands fa-linkedin text-lg text-indigoPrimary"></i>
+                                <span>LinkedIn Profile</span>
+                            </a>
+                            <a href="https://github.com/mrfahadialtaf" target="_blank" class="px-5 py-3 rounded-xl bg-slate-100 text-brandTextDark hover:text-indigoPrimary text-xs font-bold flex items-center space-x-2 border border-slate-200">
+                                <i class="fa-brands fa-github text-lg text-indigoPrimary"></i>
+                                <span>GitHub Repository</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Clean Interactive Form -->
+                    <div class="lg:col-span-7 clean-card p-8">
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-brandTextDark uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" id="contact-name" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-brandBorder text-brandTextDark placeholder-brandTextSubtle focus:outline-none focus:border-indigoPrimary focus:bg-white transition-colors text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-brandTextDark uppercase tracking-wider mb-2">Your Email</label>
+                                <input type="email" id="contact-email" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-brandBorder text-brandTextDark placeholder-brandTextSubtle focus:outline-none focus:border-indigoPrimary focus:bg-white transition-colors text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-brandTextDark uppercase tracking-wider mb-2">Subject</label>
+                                <input type="text" id="contact-subject" required placeholder="Data Platform Leadership Role" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-brandBorder text-brandTextDark placeholder-brandTextSubtle focus:outline-none focus:border-indigoPrimary focus:bg-white transition-colors text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-brandTextDark uppercase tracking-wider mb-2">Message</label>
+                                <textarea id="contact-msg" rows="4" required placeholder="Hello Fadi, we would love to connect regarding..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-brandBorder text-brandTextDark placeholder-brandTextSubtle focus:outline-none focus:border-indigoPrimary focus:bg-white transition-colors text-sm resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-white bg-indigoPrimary hover:bg-indigoLight transition-all text-xs uppercase tracking-wider shadow-md shadow-indigoPrimary/20">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-brandBorder bg-slate-50 py-8 text-center text-xs text-brandTextSubtle">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="font-mono font-bold text-indigoPrimary">FA</span>
+                <span>© 2026 Fadi Altaf | Senior Data Engineer Portfolio</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#hero" class="hover:text-brandTextDark transition-colors">Back to Top</a>
+                <a href="https://www.linkedin.com/in/muhammad-fahad-altaf-0b5b76382/" target="_blank" class="hover:text-brandTextDark transition-colors">LinkedIn</a>
+                <a href="https://github.com/mrfahadialtaf" target="_blank" class="hover:text-brandTextDark transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Experience Detail Popup Modal -->
+    <div id="exp-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div class="modal-card max-w-3xl w-full p-6 sm:p-8 rounded-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeExpModal()" class="absolute top-4 right-4 text-brandTextSubtle hover:text-brandTextDark p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div id="exp-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Project Detail Popup Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div class="modal-card max-w-3xl w-full p-6 sm:p-8 rounded-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-brandTextSubtle hover:text-brandTextDark p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div id="project-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Certifications Popup Modal -->
+    <div id="cert-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div class="modal-card max-w-xl w-full p-6 sm:p-8 rounded-2xl relative">
+            <button onclick="closeCertModal()" class="absolute top-4 right-4 text-brandTextSubtle hover:text-brandTextDark p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div id="cert-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Contact Success Confirmation Popup Modal -->
+    <div id="contact-success-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div class="modal-card max-w-md w-full p-8 rounded-2xl text-center relative border-2 border-indigo-100">
+            <div class="w-16 h-16 rounded-full bg-indigo-50 text-indigoPrimary flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-brandTextDark mb-2">Message Received!</h3>
+            <p class="text-sm text-brandTextMuted leading-relaxed mb-6" id="success-modal-body">
+                Thank you for reaching out. Fadi will review your message and reply promptly.
+            </p>
+            <button onclick="closeSuccessModal()" class="w-full py-3 rounded-xl font-bold text-white bg-indigoPrimary hover:bg-indigoLight transition-colors uppercase tracking-wider text-xs">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden clean-card px-5 py-3 rounded-xl text-brandTextDark text-xs font-semibold flex items-center space-x-3 shadow-xl border border-emerald-200">
+        <i class="fa-solid fa-circle-check text-emeraldAccent text-base"></i>
+        <span id="toast-msg">Notification</span>
+    </div>
+
+    <script>
+        // Skills Dataset
+        const skillSet = [
+            { name: "Microsoft Azure", cat: "cloud", level: "Expert", desc: "Databricks, Synapse, ADF, ADLS Gen2, Entra ID" },
+            { name: "Microsoft Fabric", cat: "cloud", level: "Expert", desc: "OneLake, Fabric Data Factory, DirectLake" },
+            { name: "Amazon Web Services", cat: "cloud", level: "Expert", desc: "Redshift, Glue, EMR, S3, Kafka" },
+            { name: "Google Cloud Platform", cat: "cloud", level: "Advanced", desc: "BigQuery, GCS, Pub/Sub Dataflow" },
+
+            { name: "Apache Spark & PySpark", cat: "bigdata", level: "Expert", desc: "Distributed ELT & Real-time Stream Processing" },
+            { name: "Azure Databricks", cat: "bigdata", level: "Expert", desc: "Delta Lake, Auto-scaling Compute Engine" },
+            { name: "Apache Kafka", cat: "bigdata", level: "Expert", desc: "High-throughput Streaming Event Bus" },
+            { name: "Delta Lake & OneLake", cat: "bigdata", level: "Expert", desc: "ACID Lakehouse Architecture & Storage" },
+
+            { name: "Azure Synapse Analytics", cat: "warehousing", level: "Expert", desc: "Materialized Views, Partitioning, Sorting" },
+            { name: "AWS Redshift", cat: "warehousing", level: "Expert", desc: "Dist/Sort Keys, Vacuum Maintenance Scripts" },
+            { name: "GCP BigQuery", cat: "warehousing", level: "Expert", desc: "Partitioning, Clustering, dbt Integration" },
+            { name: "Snowflake", cat: "warehousing", level: "Advanced", desc: "Dimensional Warehousing & Data Sharing" },
+
+            { name: "Azure Vector Search", cat: "ai", level: "Expert", desc: "Text Embedding Staging & RAG Endpoints" },
+            { name: "Vector Databases & pgvector", cat: "ai", level: "Expert", desc: "Data Vectorization & Text Chunking Frameworks" },
+
+            { name: "Apache Airflow", cat: "orchestration", level: "Expert", desc: "DAG Development & Dependency Orchestration" },
+            { name: "dbt (data build tool)", cat: "orchestration", level: "Expert", desc: "Modular Transformations & Lineage Docs" },
+            { name: "Azure Data Factory (ADF)", cat: "orchestration", level: "Expert", desc: "Enterprise Pipeline Orchestration" },
+            { name: "Fivetran & Census", cat: "orchestration", level: "Advanced", desc: "SaaS Ingestion & Reverse-ETL Automation" },
+
+            { name: "Python & SQL Scripts", cat: "devops", level: "Expert", desc: "Complex Queries, Performance Tuning, Shell" },
+            { name: "Terraform & IaC", cat: "devops", level: "Advanced", desc: "Multi-Region Cloud Resource Provisioning" },
+            { name: "Docker & Kubernetes", cat: "devops", level: "Advanced", desc: "Data Microservices Containerization" },
+            { name: "GitHub Actions & Jenkins", cat: "devops", level: "Advanced", desc: "Automated CI/CD Deployment Pipelines" },
+
+            { name: "Great Expectations", cat: "devops", level: "Expert", desc: "Automated Data Quality & Validation Frameworks" },
+            { name: "HIPAA & SOC2 Compliance", cat: "devops", level: "Expert", desc: "PHI/PII Masking & Role-Based Access (RBAC)" }
+        ];
+
+        // Experience Dataset
+        const experienceDetails = {
+            integra: {
+                role: "Senior Data Engineer",
+                company: "Integra Connect",
+                period: "May 2023 – Present",
+                badge: "Healthcare AI & Lakehouse",
+                overview: "Architect and maintain a HIPAA-compliant Delta Lake on Azure Databricks and Microsoft Fabric OneLake processing 5TB+ of patient EHR, clinical notes, and claims data daily.",
+                bullets: [
+                    "Designed and operationalized high-throughput data ingestion and vectorization pipelines on Azure Databricks to feed enterprise RAG endpoints and Azure Vector Search indices.",
+                    "Implemented automated PHI/PII masking protocols and role-based access control (RBAC) via Azure Active Directory (Entra ID), securing 10M+ records with 100% HIPAA compliance.",
+                    "Reduced cloud infrastructure expenditure across Azure and Fabric capacity units by 32% ($140K annually) through auto-scaling and storage lifecycle policies.",
+                    "Built automated data quality frameworks using Great Expectations integrated into Azure Data Factory pipelines, preventing corrupted patient data from reaching downstream tools.",
+                    "Optimized analytical views and lake indexes in Azure Synapse using partitioning, sort keys, and materialized views.",
+                    "Led the enterprise evaluation and migration of reporting infrastructure onto Microsoft Fabric OneLake, streamlining cross-team data governance for 450+ active business users.",
+                    "Partnered with clinical analysts and data science teams to build 25+ low-latency data marts and feature stores supporting predictive patient risk modeling.",
+                    "Automated Infrastructure as Code (IaC) via Terraform and CI/CD pipelines in GitHub Actions across multi-region Azure environments.",
+                    "Mentored and guided a team of 5 data engineers, establishing code review practices, engineering standards, and platform operational guidelines across Azure and Fabric environments."
+                ],
+                tech: ["Azure Databricks", "Microsoft Fabric", "OneLake", "Azure Vector Search", "PySpark", "Great Expectations", "Terraform", "GitHub Actions"]
+            },
+            datavail: {
+                role: "Warehouse Data Engineer",
+                company: "Datavail",
+                period: "April 2022 – April 2023",
+                badge: "SaaS Multi-Cloud Analytics",
+                overview: "Re-architected user event tracking pipelines across GCP and AWS handling over 150M+ daily event streams from global SaaS applications.",
+                bullets: [
+                    "Built 80+ modular data transformation models using dbt and GCP BigQuery, accelerating key reporting availability for 6 internal departments.",
+                    "Integrated 12 third-party SaaS APIs (Salesforce, Stripe, Mixpanel) into AWS S3 and GCP GCS repositories using Fivetran and Airflow DAGs.",
+                    "Accelerated executive BI dashboard load times by 48% through GCP BigQuery partitioning/clustering strategies and dbt incremental models.",
+                    "Implemented cross-cloud reverse-ETL pipelines using Census to sync enriched product usage metrics from GCP BigQuery back into CRM tools.",
+                    "Established automated schema evolution scripts to handle frequent changes in user event payloads, reducing pipeline failures by 90%.",
+                    "Executed full-stack data modeling reviews converting 50TB+ of unstructured JSON event payloads in GCS and AWS S3 into structured Star Schemas.",
+                    "Standardized comprehensive dbt lineage documentation and data dictionaries, enabling 80+ non-technical stakeholders to audit data assets."
+                ],
+                tech: ["GCP BigQuery", "AWS S3", "GCS", "dbt", "Apache Airflow", "Fivetran", "Census Reverse-ETL", "Star Schema"]
+            },
+            ocrolus: {
+                role: "Big Data Engineer",
+                company: "Ocrolus",
+                period: "September 2019 – March 2022",
+                badge: "Fintech Streaming Infrastructure",
+                overview: "Designed and scaled high-throughput financial data pipelines on AWS processing $50M+ in daily transaction volume with 99.99% system uptime.",
+                bullets: [
+                    "Implemented real-time streaming architectures using Apache Kafka and PySpark on AWS EMR to ingest 750GB+ daily transaction logs with sub-second latency.",
+                    "Built automated transaction reconciliation frameworks using AWS Glue and PostgreSQL, reducing manual auditing efforts by 65% (saving 120+ hours monthly).",
+                    "Partnered with Data Science teams to operationalize machine learning credit-risk models onto AWS EMR pipelines for real-time risk scoring.",
+                    "Optimized AWS Redshift query execution times by 40% through distribution/sort key refactoring and automated vacuum maintenance scripts.",
+                    "Containerized 20+ data microservices using Docker and automated deployments via Jenkins CI/CD pipelines across AWS environments."
+                ],
+                tech: ["Apache Kafka", "PySpark", "AWS EMR", "AWS Glue", "AWS Redshift", "PostgreSQL", "Docker", "Jenkins"]
+            },
+            ordergroove: {
+                role: "ETL/ELT Developer",
+                company: "Ordergroove",
+                period: "June 2017 – August 2019",
+                badge: "Ecommerce Batch Ingestion",
+                overview: "Developed and optimized enterprise batch ETL/ELT processes using SSIS and Python to consolidate inventory and order data across 5 PostgreSQL and MySQL databases handling 2M+ monthly orders.",
+                bullets: [
+                    "Refactored legacy stored procedures, complex joins, and SQL scripts, improving daily batch pipeline execution performance and cutting runtimes by 3 hours.",
+                    "Designed 15+ dimensional Star and Snowflake schemas in PostgreSQL supporting 30+ Tableau executive and supply chain dashboards.",
+                    "Implemented automated SQL data validation scripts and shell-based email alerting mechanisms to identify and remediate batch pipeline failures.",
+                    "Automated file ingestion and extraction workflows from 8 third-party vendor APIs using Python and scheduled Cron jobs on local Linux servers."
+                ],
+                tech: ["PostgreSQL", "MySQL", "Python", "SSIS", "Kimball Modeling", "Star Schema", "Tableau", "Linux Shell"]
+            }
+        };
+
+        // Project Dataset
+        const projectDetails = {
+            proj1: {
+                title: "Enterprise Healthcare Vector Data Pipeline & Ingestion Engine",
+                tags: ["PySpark", "Azure Databricks", "Azure Vector Search", "100% HIPAA"],
+                desc: "An automated ETL/ELT pipeline that ingests, cleanses, and anonymizes 1M+ unstructured doctor consultation notes daily using PySpark on Databricks.",
+                flow: [
+                    "Raw Ingestion: EHR clinical notes streaming into ADLS Gen2 storage",
+                    "Anonymization Layer: PySpark PII/PHI masking engine",
+                    "Text Vectorization: Text chunking and embedding generation",
+                    "Vector Indexing: Azure Vector Search indexing for GenAI RAG applications"
+                ],
+                impact: [
+                    "Sub-second data availability for enterprise clinical decision-support applications",
+                    "Maintained 100% HIPAA compliance across 10M+ encrypted clinical records",
+                    "32% reduction in cloud compute expenditures"
+                ]
+            },
+            proj2: {
+                title: "Multi-Cloud Event Analytics & Automated Data Quality Framework",
+                tags: ["GCP BigQuery", "AWS S3", "dbt", "Great Expectations", "Airflow"],
+                desc: "Designed a unified event data lakehouse processing 150M+ daily telemetry events across AWS S3 and GCP BigQuery with automated schema validation.",
+                flow: [
+                    "Event Streaming: 150M+ telemetry events landed in AWS S3 and GCS",
+                    "dbt Transformations: 80+ modular incremental models in BigQuery",
+                    "Quality Guardrails: Integrated Great Expectations test suites",
+                    "Reverse ETL: Census sync of enriched usage metrics into CRM tools"
+                ],
+                impact: [
+                    "Reduced downstream data quality incidents by 90%",
+                    "Accelerated executive BI dashboard load times by 48%",
+                    "Standardized dbt lineage documentation for 80+ stakeholders"
+                ]
+            },
+            proj3: {
+                title: "Real-Time Financial Transaction & Streaming Anomaly Detection Engine",
+                tags: ["Apache Kafka", "PySpark Streaming", "AWS EMR", "AWS Redshift"],
+                desc: "Architected a low-latency event-driven streaming ingestion system on AWS using Apache Kafka and PySpark on EMR to evaluate live credit card streams.",
+                flow: [
+                    "Kafka Event Bus: Ingesting 750GB+ daily transaction logs",
+                    "PySpark Streaming: Windowed aggregations and feature extraction",
+                    "ML Model Execution: Real-time fraud scoring under 200 milliseconds",
+                    "Warehouse Persistence: AWS Redshift dimensional storage"
+                ],
+                impact: [
+                    "Flagged high-risk fraudulent transactions in under 200 milliseconds",
+                    "Processed $50M+ in daily transaction volume with 99.99% system uptime",
+                    "Saved 120+ hours monthly (65% reduction in manual auditing efforts)"
+                ]
+            }
+        };
+
+        // Certification Dataset
+        const certDetails = {
+            fabric: {
+                title: "Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)",
+                issuer: "Microsoft",
+                code: "DP-600",
+                desc: "Validates proficiency in implementing enterprise analytics platforms using Microsoft Fabric, OneLake storage, Fabric Data Factory, and DirectLake query mode.",
+                skills: ["Fabric Lakehouses", "OneLake Management", "Data Factory Pipelines", "DirectLake Query Performance"]
+            },
+            aws: {
+                title: "AWS Certified Data Engineer – Associate",
+                issuer: "Amazon Web Services",
+                code: "DEA-C01",
+                desc: "Validates expertise in data ingestion, transformation, and orchestration using AWS Glue, Redshift, EMR, S3, Athena, and Kafka.",
+                skills: ["AWS Glue & EMR", "Redshift Data Warehousing", "S3 Storage Lifecycle", "AWS IAM & Data Security"]
+            },
+            databricks: {
+                title: "Databricks Certified Data Engineer Professional",
+                issuer: "Databricks Academy",
+                code: "Professional Level",
+                desc: "Validates advanced capability in Delta Lake internal architecture, PySpark query optimization, Structured Streaming, and Unity Catalog governance.",
+                skills: ["Advanced PySpark Optimization", "Delta Lake ACID & Time Travel", "Databricks Workflows", "Unity Catalog RBAC"]
+            }
+        };
+
+        // Render Skill Cards
+        function renderSkills(filterCat = 'all', searchQuery = '') {
+            const grid = document.getElementById('skills-grid');
+            grid.innerHTML = '';
+
+            const filtered = skillSet.filter(s => {
+                const matchesCat = filterCat === 'all' || s.cat === filterCat;
+                const matchesSearch = s.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      s.desc.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-8 text-brandTextSubtle text-sm">No skills found matching filter.</div>`;
+                return;
+            }
+
+            filtered.forEach(s => {
+                const card = document.createElement('div');
+                card.className = 'clean-card p-5 flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h5 class="font-bold text-brandTextDark text-sm">${s.name}</h5>
+                            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigoPrimary border border-indigo-200">${s.level}</span>
+                        </div>
+                        <p class="text-xs text-brandTextMuted leading-relaxed">${s.desc}</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Skill Filters
+        document.querySelectorAll('.skill-cat-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.skill-cat-btn').forEach(b => {
+                    b.classList.remove('bg-indigoPrimary', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-slate-100', 'text-brandTextMuted');
+                });
+
+                e.target.classList.remove('bg-slate-100', 'text-brandTextMuted');
+                e.target.classList.add('bg-indigoPrimary', 'text-white', 'shadow-sm');
+
+                const cat = e.target.getAttribute('data-cat');
+                const searchVal = document.getElementById('skill-search').value;
+                renderSkills(cat, searchVal);
+            });
+        });
+
+        document.getElementById('skill-search').addEventListener('input', (e) => {
+            const activeCatBtn = document.querySelector('.skill-cat-btn.bg-indigoPrimary');
+            const activeCat = activeCatBtn ? activeCatBtn.getAttribute('data-cat') : 'all';
+            renderSkills(activeCat, e.target.value);
+        });
+
+        // Experience Modal Logic
+        function openExperienceModal(key) {
+            const exp = experienceDetails[key];
+            if (!exp) return;
+
+            const modalContent = document.getElementById('exp-modal-content');
+            modalContent.innerHTML = `
+                <div class="mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigoPrimary border border-indigo-200">${exp.badge}</span>
+                </div>
+                <h3 class="text-2xl font-extrabold text-brandTextDark">${exp.role}</h3>
+                <h4 class="text-indigoPrimary font-bold text-base mb-1">${exp.company} <span class="text-brandTextSubtle font-normal text-xs ml-2">(${exp.period})</span></h4>
+                <p class="text-sm text-brandTextMuted leading-relaxed mb-6 pt-3 border-t border-brandBorder">${exp.overview}</p>
+                
+                <h5 class="text-xs font-bold text-indigoPrimary uppercase tracking-widest mb-3">Key Responsibilities & Achievements</h5>
+                <ul class="space-y-3 mb-6">
+                    ${exp.bullets.map(b => `
+                        <li class="flex items-start space-x-2 text-xs sm:text-sm text-brandTextMuted leading-relaxed">
+                            <i class="fa-solid fa-check text-indigoPrimary mt-1 flex-shrink-0"></i>
+                            <span>${b}</span>
+                        </li>
+                    `).join('')}
+                </ul>
+
+                <div class="pt-4 border-t border-brandBorder">
+                    <p class="text-xs font-bold text-brandTextSubtle uppercase tracking-wider mb-2">Core Technical Stack</p>
+                    <div class="flex flex-wrap gap-2">
+                        ${exp.tech.map(t => `<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 text-brandTextDark font-medium border border-slate-200">${t}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('exp-modal').classList.remove('hidden');
+        }
+
+        function closeExpModal() {
+            document.getElementById('exp-modal').classList.add('hidden');
+        }
+
+        // Project Modal Logic
+        function openProjectModal(key) {
+            const proj = projectDetails[key];
+            if (!proj) return;
+
+            const modalContent = document.getElementById('project-modal-content');
+            modalContent.innerHTML = `
+                <h3 class="text-2xl font-extrabold text-brandTextDark mb-2">${proj.title}</h3>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    ${proj.tags.map(t => `<span class="px-2 py-1 rounded text-xs font-mono bg-indigo-50 text-indigoPrimary font-semibold border border-indigo-200">${t}</span>`).join('')}
+                </div>
+                <p class="text-sm text-brandTextMuted leading-relaxed mb-6">${proj.desc}</p>
+                
+                <h4 class="text-xs font-bold text-indigoPrimary uppercase tracking-widest mb-3">Architectural Data Flow</h4>
+                <div class="space-y-2 mb-6">
+                    ${proj.flow.map((f, idx) => `
+                        <div class="p-3 rounded-xl bg-slate-50 border border-brandBorder flex items-center space-x-3">
+                            <span class="w-6 h-6 rounded-full bg-indigoPrimary text-white font-bold text-xs flex items-center justify-center">${idx + 1}</span>
+                            <span class="text-xs font-semibold text-brandTextDark">${f}</span>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <h4 class="text-xs font-bold text-emeraldAccent uppercase tracking-widest mb-3">Measured Metrics & Impact</h4>
+                <ul class="space-y-2 mb-6">
+                    ${proj.impact.map(i => `
+                        <li class="flex items-center space-x-2 text-xs text-brandTextMuted">
+                            <i class="fa-solid fa-circle-check text-emeraldAccent"></i>
+                            <span>${i}</span>
+                        </li>
+                    `).join('')}
+                </ul>
+            `;
+
+            document.getElementById('project-modal').classList.remove('hidden');
+        }
+
+        function closeProjectModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+
+        // Cert Modal Logic
+        function openCertModal(key) {
+            const cert = certDetails[key];
+            if (!cert) return;
+
+            const modalContent = document.getElementById('cert-modal-content');
+            modalContent.innerHTML = `
+                <h3 class="text-xl font-bold text-brandTextDark mb-1">${cert.title}</h3>
+                <p class="text-xs font-mono font-semibold text-indigoPrimary mb-4">${cert.issuer} | Code: ${cert.code}</p>
+                <p class="text-xs text-brandTextMuted leading-relaxed mb-4">${cert.desc}</p>
+                <h4 class="text-xs font-bold text-brandTextSubtle uppercase tracking-wider mb-2">Validated Competencies</h4>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    ${cert.skills.map(s => `<span class="px-2.5 py-1 rounded text-xs font-mono bg-slate-100 text-brandTextDark border border-slate-200">${s}</span>`).join('')}
+                </div>
+                <button onclick="closeCertModal()" class="w-full py-2.5 rounded-xl bg-indigoPrimary text-white font-bold text-xs uppercase tracking-wider">Close</button>
+            `;
+
+            document.getElementById('cert-modal').classList.remove('hidden');
+        }
+
+        function closeCertModal() {
+            document.getElementById('cert-modal').classList.add('hidden');
+        }
+
+        // Contact Form Handling
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            document.getElementById('success-modal-body').innerText = `Thank you ${name}! Your message has been sent successfully. Fadi Altaf will get back to you shortly.`;
+            document.getElementById('contact-success-modal').classList.remove('hidden');
+            e.target.reset();
+        });
+
+        function closeSuccessModal() {
+            document.getElementById('contact-success-modal').classList.add('hidden');
+        }
+
+        // Copy Clipboard Helper
+        function copyToClipboard(text, message) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            showToast(message);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('hidden');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Mobile Drawer Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Initial Render
+        renderSkills();
+    </script>
+</body>
+</html>
